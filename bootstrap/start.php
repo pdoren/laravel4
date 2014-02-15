@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-    'local' => array('local.*','*.local'), // Change this to your local machine hostname.
+    'local' => array('local.*','*.local','127.0.0.1','localhost'), // Change this to your local machine hostname.
     'staging' => array('*.staging-server.org'),
     'production' => array('*.com','*.cl'),
 
