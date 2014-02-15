@@ -24,13 +24,12 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
+$env = $app->detectEnvironment(function()
+{
 
-    'local' => array('local.*','*.local','127.0.0.1','localhost'), // Change this to your local machine hostname.
-    'staging' => array('*.staging-server.org'),
-    'production' => array('*.com','*.cl'),
+    return 'local';
 
-));
+});
 
 /*
 |--------------------------------------------------------------------------
